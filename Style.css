@@ -1,0 +1,513 @@
+:root {  
+    --textIngresar: #0A3871;
+    --universal: #F3F5FC;
+    --textResultado: white;
+    --informacion: #495057;
+    --titulo: #00008B;
+}
+
+*{
+    background: var(--universal);
+}
+
+body {
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    padding: 20px 0 0 50px;
+}
+
+.caja {
+    display: flex;
+}
+
+h2 {
+    color: var(--titulo);
+    position: absolute;
+    left: 38%;
+}
+
+.titulo {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150%;
+}
+
+main {
+    display: flex;
+    margin: auto;
+}
+
+.cajaIngresar {
+    margin: auto;
+}
+
+.ingresar {  
+    border: none;
+    color: var(--textIngresar);
+    text-transform: lowercase;
+    line-height: 180%;
+    padding: 35px 0 0 0;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 25px;
+}
+
+textarea {
+    resize: none;
+}
+
+::placeholder {
+    color: var(--textIngresar);
+}
+
+.ingresar:focus {
+    outline: none;
+}
+
+h3 {
+    padding: 55px 0 0 0;
+}
+
+.advertencia {
+    color: var(--informacion);
+    font-size: 18px;
+}
+
+.botones {  
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.btnEncriptar {
+    color: var(--textResultado);
+    background: var(--textIngresar);
+}
+
+.btnEncriptar:hover {
+    color: var(--textIngresar);
+    background: var(--textResultado);
+}
+
+.btnEncriptar , .btnDesencriptar , .btnCopiar {
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+    border-radius: 24px;
+    width: 230px;
+    border-style: solid;
+    border-color: var(--textIngresar);
+    cursor: pointer;
+}
+
+.btnDesencriptar , .btnCopiar {
+    color: var(--textIngresar);
+}
+
+.btnDesencriptar:hover {
+    color: var(--textIngresar);
+    background: var(--textResultado);
+}
+
+.cajaResultado {
+    margin: auto;
+    height: 667px;
+    border-radius: 24px;
+    background: var(--textResultado);
+    box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.1);
+}
+
+.resultado {
+    background: var(--textResultado);
+    background-image: url(../img/Muñeco.png);
+    background-position: center 30%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    color: var(--textIngresar);
+    border: none;
+    line-height: 238%;
+    width: 80%;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.resultado:focus {
+    outline: none;
+}
+
+.textNegrita {
+    display: block;
+    position: relative;
+    bottom: 160px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: transparent;
+    width: 200px;
+    margin: auto;
+}
+
+.textNormal {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    font-size: 20px;
+    bottom: 130px;
+    width: 310px;
+    margin: auto;
+}
+
+.copiar {
+    position: relative;
+    bottom: 1px;
+    background-color: transparent;
+    width: 228px;
+    margin: auto;
+}
+
+.btnCopiar {
+    display: none;
+}
+
+.btnCopiar:hover {
+    color: var(--universal);
+    background: var(--textIngresar);
+}
+
+.redesSociales{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding-top: 40px;
+}
+
+#separadorIz {
+    margin-left: 2%;
+}
+
+.separador {
+    width: 40%;
+    height: 1px;
+    background-color: var(--textIngresar);
+    margin-top: 18px;
+}
+
+.redSocial {
+    margin: auto;
+}
+
+.redSocial img:hover {
+    width: 2em;
+    height: 2em;
+}
+
+#separadorDer {
+    margin-right: 2%;
+}
+
+.copyright {
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.ventana {
+    position: relative;
+}
+
+.textVentana , .textVentana2 {
+    background: var(--textIngresar);
+}
+
+.informe , .informe2 {
+    display: none;
+    position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.ventanaModal , .ventanaModal2 {
+    width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 20px 20px 20px 20px;
+	border-radius: 15px;
+	background: #fff;
+}
+
+.textInforme1 , .textInforme2 , .textInforme3 , .textInforme4 {
+    font-family: 'Inter';
+    color: var(--textIngresar);
+    background: transparent;
+}
+
+.textInforme1 , .textInforme3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.textInforme2 , .textInforme4{
+    padding-top: 5px;
+}
+
+.textResultado {
+    color: red;
+    font-weight: 600;
+}
+
+@keyframes mover {
+    0%{
+        transform: translate(100%);
+    }
+}
+
+@keyframes mover2 {
+    0%{
+        transform: translate(0%, 100%);
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    header {
+        padding: 20px 0 0 0;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cajaIngresar {
+        width: 100%;
+    }
+
+    h2 {
+        width: auto;
+    }
+
+    .ingresar {
+        width: 90%;
+        line-height: 180%;
+    }
+
+    h3 {
+        padding-top: 10px;
+    }
+    
+    .botones {
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+        padding: 3px 0 10px 0;
+        text-align: center;
+        margin: auto;
+    }
+
+    .btnEncriptar , .btnDesencriptar {
+        width: 190px;
+        margin: auto;
+    }
+
+    .btnEncriptar:hover {
+        color: var(--textResultado);
+        background: var(--textIngresar);
+    }
+
+    .btnDesencriptar:hover {
+        color: var(--textIngresar);
+        background: var(--universal);
+    }
+
+    .cajaResultado {
+        padding: 0;
+        width: 90%;
+        height: 190px;
+        margin-bottom: 15px;
+    }
+
+    .resultado {
+        background-image: none;
+        line-height: 70%;
+        width: 90%;
+    }
+
+    .textNegrita {
+        bottom: 71%;
+    }
+
+    .textNormal {
+        bottom: 66%;
+        width: auto;
+    }
+
+    .btnCopiar {
+        width: 186px;
+        margin: auto;
+    }
+
+    .btnCopiar:hover {
+        color: var(--textIngresar);
+        background: var(--universal);
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .cajaRedesSociales {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .redesSociales {
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .redSocial img:hover {
+        width: 24px;
+        height: 24px;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    .ventanaModal , .ventanaModal2 {
+        width: 80%;
+    }
+
+    .textInforme1 , .textInforme3{
+        font-size: 18px;
+    }
+    
+    .textInforme2 , .textInforme4{
+       font-size: 14px;
+    }
+    
+}
+
+@media screen and (min-width: 500px) and (max-width: 1020px) {
+    html{
+        height: 100%;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cajaIngresar {
+        width: 100%;
+    }
+
+    .ingresar {
+        width: 90%;
+        line-height: 150%;
+        font-size: 40px;
+    }
+
+    h3 img {
+        width: 18px;
+    }
+
+    .advertencia {
+        font-size: 28px;
+    }
+
+    .botones {
+        position: relative;
+        padding: 15px 0 18px 0;
+        margin: auto;
+    }
+
+    .btnDesencriptar , .btnEncriptar {
+        margin: auto;
+        font-size: 35px;
+        width: 280px;
+    }
+
+    .cajaResultado {
+        width: 90%;
+        height: 270px;
+        margin-bottom: 15px;
+    }
+
+    .resultado{
+        background-image: none;
+        height: 90%;
+        width: 90%;
+        font-size: 40px;
+    }
+
+    .textNegrita , .textNormal{
+        width: auto;
+    }
+
+    .textNegrita {
+        bottom: 190px;
+        font-size: 40px;
+    }
+
+    .textNormal {
+        font-size: 33px;
+    }
+
+    .copiar{
+        margin: auto;
+    }
+
+    .btnCopiar {
+        position: relative;
+        font-size: 40px;
+        height: 60px;
+        padding: 0;
+    }
+
+    .redesSociales {
+        padding-top: 15px;
+    }
+
+    .redSocial img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .redSocial img:hover {
+        width: 38px;
+        height: 38px;
+    }
+
+    .separador {
+        width: 20%;
+        margin-top: 28px;
+    }
+
+    .copyright {
+        font-size: 25px;
+    }
+
+    .textInforme1 , .textInforme3{
+        font-size: 35px;
+    }
+    
+    .textInforme2 , .textInforme4{
+       font-size: 19px;
+    }
+}
